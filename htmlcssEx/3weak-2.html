@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고급 모바일 프로그래밍 기초 3주차 (1)</title>
+    <style>
+        .ff{
+            background-color: bisque;
+            color: rgb(56, 39, 148);
+        }
+        .ff2{
+            background: linear-gradient(to right, rgb(255, 103, 103), rgb(92, 92, 255));
+        }
+        .ff3{
+            background: linear-gradient(90deg, rgba(109,0,255,1) 0%, rgba(32,145,193,1) 35%, rgba(99,255,163,1) 100%);
+        }
+        .ff4{
+            background: radial-gradient(circle, rgba(131,58,180,1) 20%, rgba(253,29,29,1) 60%, rgba(252,176,69,1) 100%);
+            width: 256px;
+            height: 256px;
+        }
+        .next {
+            background-color: rgb(75, 172, 172);
+            text-align: center;
+            color: aliceblue;
+            margin-top: 40px;
+        }
+        .prev {
+            background-color: rgb(163, 97, 77);
+            text-align: center;
+            color: aliceblue;
+            margin-top: 40px;
+        }
+
+    </style>
+  <body>
+    <div class="ff">
+        <h1>CSS</h1>
+        <p>background-color는 배경색<br>color는 글자색</p>
+        <p>HEX code FF|FF|FF = Red|Green|Blue, 256색<br>RGBA, A-는 알파로 투명도를 뜻함</p>
+        <p>배경은 bisque, 글자는 rgb(56, 39, 148) 으로 줌, HEX로는 #382794 </p>
+    </div>
+    <div class="ff2">
+        <h1>그레이디언트</h1>
+        <p>to left, right, top, bottom 으로 방향 조정 가능<br>현재 to right 적용</p>
+        <a href="http://cssgradient.io">링크</a>
+    </div>
+    <div class="ff3">
+        <p>cssgradient.io로 편하게 설정할 수 있음</p>
+        <p><br><br><br>이건 그냥 내용 채울려고 쓴거</p>
+    </div>
+    <div class="ff4">
+        <h2>원형 그레이디언트</h2>
+    </div>
+
+    <button class="prev" type="button" onClick="location.href='3weak.html'">
+        이전 페이지
+      </button>
+      <button class="next" type="button" onClick="location.href='./4weak.html'">
+        다음 페이지
+      </button>
+  </body>
+</html>

@@ -1,4 +1,12 @@
 @charset "UTF-8";
+div {
+  background-color: rgb(200, 255, 237);
+  width: 70%;
+}
+p {
+  background-color: rgb(160, 229, 206);
+  width: 70%;
+}
 td {
   border: solid 2px #44f638;
 }
@@ -6,9 +14,11 @@ td {
   background-color: rgb(75, 172, 172);
   text-align: center;
   color: aliceblue;
+  margin-top: 40px;
 }
 .prev {
   background-color: rgb(163, 97, 77);
   text-align: center;
   color: aliceblue;
+  margin-top: 40px;
 }
