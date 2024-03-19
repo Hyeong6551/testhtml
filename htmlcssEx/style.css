@@ -1,0 +1,14 @@
+@charset "UTF-8";
+td {
+  border: solid 2px #44f638;
+}
+.next {
+  background-color: rgb(79, 153, 153);
+  text-align: center;
+  color: aliceblue;
+}
+.prev {
+  background-color: rgb(163, 97, 77);
+  text-align: center;
+  color: aliceblue;
+}
