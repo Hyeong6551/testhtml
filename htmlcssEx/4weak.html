@@ -5,8 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <title>고급 모바일 프로그래밍 기초 4주차</title>
+    <style>
+      p {
+        color: red;
+      }
+      h3 {
+        font-size: 50px;
+      }
+      h4 {
+        letter-spacing: 11px;
+      }
+      .box {
+        line-height: 50%;
+      }
+      .wb {
+        word-break: keep-all;
+      }
+      .to {
+        text-overflow: clip;
+      }
+      .center {
+        text-align: center;
+        font-size: 40px;
+      }
+      .fw {
+        font-weight: 900;
+      }
+
+      .font {
+        font-family: YEONGJU-Seonbi, sans-serif;
+        font-size: 50px;
+      }
+      span {
+        font-family: YEONGJU-Seonbi, sans-serif;
+        font-weight: 700;
+        font-size: 50px;
+      }
+
+      @font-face {
+        font-family: YEONGJU-Seonbi;
+        src: url(/htmlcssEx/fonts/YEONGJUSeonbi.ttf);
+      }
+
+      .ex1 {
+        list-style-type: '※ ';
+      }
+      .ex2 {
+        list-style-type: '👌 ';
+      }
+      .ex3 {
+        list-style-image: url('/htmlcssEx/source/16x16.jpg');
+      }
+      .ex4 {
+        list-style-image: linear-gradient(to left bottom, red, blue);
+      }
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Workbench:SCAN@10&display=swap');
+      .workbench {
+        font-family: 'Workbench', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: 'BLED' 0, 'SCAN' 10;
+        font-size: 60px;
+      }
+    </style>
   </head>
   <body>
-    <p>아직 아무것도 없다</p>
+    <div>
+      <p>아직 아무것도 없다</p>
+      <h3>sssss font-size</h3>
+      <h4>asdasd letter-spacing</h4>
+      <h5>adddddddd</h5>
+      <div class="box">
+        adsfassa<br />sadfadafdadadf<br />asdfasddsfdasa<br /><b>line-height</b>
+      </div>
+      <h2>
+        띄 어 쓰 기 무 시 : white-space (normal, nowrap, pre, pre-wrap,
+        pre-line)
+      </h2>
+      <div class="wb">ㅎㅎ ㅎㅎ ㅎㅎ ㅎㅎ word-break</div>
+      <div class="to">잘린다아 아 text-overflow</div>
+      <div class="center">가운데 Center</div>
+      <div class="fw">가나다라마바사 font-weight: 900</div>
+      <div class="font">평범 선비체</div>
+      <span>굵은 선비체</span>
+      <div>뭔 차이지..?</div>
+      <br />
+      <div class="workbench">ABCDEFGHIJ!?</div>
+      <div>웹에서 가져옴</div>
+    </div>
+    <div>
+      <h1>리스트 스타일</h1>
+      <ul class="ex1">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+      </ul>
+      <ol class="ex2">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+      </ol>
+      <ul class="ex3">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+      </ul>
+      <ol class="ex4">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+      </ol>
+    </div>
+
+    <button class="prev" type="button" onClick="location.href='3weak-2.html'">
+      이전 페이지
+    </button>
+    <button class="next" type="button" onClick="location.href='./5weak.html'">
+      다음 페이지
+    </button>
   </body>
 </html>
