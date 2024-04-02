@@ -1,11 +1,6 @@
 @charset "UTF-8";
-div {
-  background-color: rgb(200, 255, 237);
-  width: 70%;
-}
 p {
-  background-color: rgb(160, 229, 206);
-  width: 70%;
+  background-color: rgba(160, 229, 206, 0.4);
 }
 td {
   border: solid 2px #44f638;

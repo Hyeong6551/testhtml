@@ -3,13 +3,130 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>고급 모바일 프로그래밍 기초 5주차 (1)</title>
+    <style>
+      h2 {
+        background: beige;
+      }
+      h4 {
+        width: 50%;
+        background: aquamarine;
+      }
+      h5 {
+        width: 100px;
+        background: antiquewhite;
+      }
+      .max_min_width {
+        max-width: 700px;
+        min-width: 600px;
+        background: #ffee2e;
+        margin: auto;
+      }
+      .max_min_height {
+        font-size: 50px;
+        max-height: 60px;
+        background: #aaff44;
+      }
+      .max_min_height_hd {
+        font-size: 50px;
+        max-height: 175px;
+        background: #aaff44;
+        overflow: hidden;
+        margin-top: 50%;
+      }
+      .aspect{
+        width: 50%;
+        aspect-ratio: 500;
+        background: #774411;
+      }
+      .bgstyle{
+        width: 150px;
+        height: 150px;
+        background-color: aqua;
+      }
+      .bgstyle_g{
+        width: 150px;
+        height: 150px;
+        background-image: linear-gradient(red, blue);
+      }
+      .url{
+        background-image: url(/htmlcssEx/source/pepe.jpg);
+        background-size: 100% 100%;
+        width: 150px;
+        height: 150px;
+      }
+      .position{
+        background-image: url(/htmlcssEx/source/pepe.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 150px;
+        height: 150px;
+      }
+      .border{
+        width: 500px;
+        height: 300px;
+        border:
+        #695946 solid 2px;
+        border-width: 6px;
+      }
+      .radius{
+        width: 150px;
+        height: 150px;
+        background-color: rgb(32, 194, 194);
+        border-radius: 32px;
+        overflow: hidden;
+      }
+      .radius_2{
+        width: 150px;
+        height: 150px;
+        background-color: rgb(32, 194, 67);
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        overflow: hidden;
+      }
+    </style>
   </head>
-  <body>
-    <button class="prev" type="button" onClick="location.href='3weak-2.html'">
+    <h1>박스 크기 스타일</h1>
+    <h3>
+      width : 속성 브라우저가 가로크기가 width보다 작을 경우 스크롤 생겨 보기
+      않좋아 %로 지정하는 경우가 많음
+    </h3>
+    <h2>기본적으로 100%</h2>
+    <h4>50%는 반만 차지</h4>
+    <h5>100px만큼 차지</h5>
+    <div class="max_min_width">max-width/min-width : 최대/최소 폭</div>
+    <div class="max_min_height">
+      max-height/min-height: 최대/최소 높이 // ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥
+      ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡ ♥ ♡
+    </div>
+    <div class="max_min_height_hd">
+        overflow : hidden 요소 밖을 탈출하지 못하게 자름 // 
+        visible : 벗어나도 보임
+        scroll : 스크롤 생성
+    </div>
+    <div class="aspect">
+        aspect : 속성의 가로세로 비율 조정
+    </div>
+    <br>
+    <h1>박스 배경</h1>
+    <div class="bgstyle"></div><br>
+    <div class="bgstyle_g"></div>
+    <br>
+    <div class="url">배경 이미지/그레디언트/반복(Repeat) 가능, repeat -X/Y 방향으로 가능</div>
+    <div>ex. repeat no-repeat : 가로 반복(x), 세로 반복(y)</div>
+    <div>background-size : 100% 100% (딱 맞추기), contain (반복), cover (배경이미지가 잘리더라도 요소를 가득 채우게 설정)</div>
+    <div class="position">background-position (center) : 배경이미지 중심으로 // 20% 10% 가로20, 세로10</div>
+    <br>
+    <div class="border">테두리 border-width : 10px
+    </div>
+    <br>
+    <div class="radius">%로도 가능<br>50% 넘어가면 원</div><br>
+    <div class="radius_2">방향 설정 가능 top/bottom-left/right<br></div>
+    <button class="prev" type="button" onClick="location.href='4weak.html'">
       이전 페이지
     </button>
-    <button class="next" type="button" onClick="location.href='./5weak.html'">
+    <button class="next" type="button" onClick="location.href='./5weak-2.html'">
       다음 페이지
     </button>
   </body>
