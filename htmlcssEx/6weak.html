@@ -3,9 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>고급 모바일 프로그래밍 기초 6주차</title>
+    <title>고급 모바일 프로그래밍 기초 6주차 (1)</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <style></style>
   </head>
   <body>
-    <h1>태그 선택자 (예정)</h1>
+    <h1>태그 선택자</h1>
+    <p>div { }, span{ } 등 등</p>
+    <br />
+    <h1>전체 선택자</h1>
+    <p>* { } 모두 적용</p>
+    <br />
+    <h1>아이디 선택자</h1>
+    <p>
+      아이디 속성값은 중복이 안됨 (다중선언 불가) <br />id="aa" 면<br />
+      #aa { }
+    </p>
+    <br />
+    <h1>클래스 선택자</h1>
+    <p>
+      클래스는 다중 선언 가능<br />class="bb"면<br />
+      .bb { }
+    </p>
+    <br />
+    <h1>다중 클래스</h1>
+    <p>
+      class="aa bb"면<br />
+      다중으로 .aa{ } .bb{ }
+    </p>
+    <br />
+    <h1>속성 선택자</h1>
+    <p>
+      대괄호 [ ]로 사용, 단독 사용 불가 <br />
+      사용예시 : 선택자[속성='값']
+    </p>
+    <br />
+    <h1>가상 클래스 선택자</h1>
+    <div>
+      <p>사용예시 : 선택자:가상 클래스</p>
+      <br />
+      <h2>가상 클래스 종류</h2>
+      <p>hover : 커서 위에 올려 놓았을 때 이벤트 발생</p>
+      <p>active : 요소를 활성화시켰을 때 이벤트 발생 (ex 버튼 클릭)</p>
+      <p>checked : 요소가 체크되었을 때</p>
+      <p>disabled : 요소가 비활성 요소일 때</p>
+      <p>enabled : 요소가 활성 요소일 때</p>
+      <p>visited : 요소를 방문했을 때 스타일 반영 <br />a 태그만 사용 가능</p>
+      <p>focus : 요소가 포커싱될 때 (tabindex)</p>
+      <p>nth-child(N) : 요소가 N번째 요소일 때 스타일 반영</p>
+    </div>
+    <br />
+    <h1>결합자</h1>
+    <p>선택자 1 ~ 선택자 2 (ex/ div ~ span)</p>
+    <br />
+    <div>
+      <h2>결합자 종류</h2>
+      <p>
+        형제 결합자 : ~ 부호 사용<br />
+        선택자 1 기준으로 모든 선택자 2에 적용
+      </p>
+      <p>
+        인접 형제 결합자 : + 부호 사용<br />
+        선택자 1 기준으로 바로 뒤에 있는 선택자 2 에만 적용<br />
+        중간에 다른 태그가 섞여있으면 적용안됨
+      </p>
+      <p>
+        자식 결합자 : > 부호 사용<br />
+        선택자 1의 자식 요소
+      </p>
+      <p>
+        자손 결합자 : 띄어쓰기 사용<br />
+        선택자 1의 자손 요소<br />
+        자식을 포함한 모든 자손
+      </p>
+    </div>
+    <button class="prev" type="button" onClick="location.href='5weak-2.html'">
+      이전 페이지
+    </button>
+    <button class="next" type="button" onClick="location.href='./6weak-2.html'">
+      다음 페이지
+    </button>
   </body>
 </html>
