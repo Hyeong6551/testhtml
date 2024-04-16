@@ -17,3 +17,8 @@ td {
   color: aliceblue;
   margin-top: 40px;
 }
+.button {
+  position: fixed;
+  margin-left: 60%;
+  margin-top: -50px;
+}
