@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고급 모바일 프로그래밍 기초 9주차</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script></script>
+  </head>
+  <body>
+    <script>
+      let str1 = "asdfasdfadsf'ggg'asdas";
+      document.writeln(str1);
+      let a = 4;
+      let b = 4;
+      let c = 5;
+      console.log(a == b);
+      document.writeln(a == b);
+      console.log(a == c);
+      document.writeln(a == c);
+
+      const person = {
+        fisrt_name: 'd',
+        last_name: 'f',
+        age: 20,
+      };
+      console.log(person.age, person.fisrt_name, person.last_name);
+      document.writeln(person.age, person.fisrt_name, person.last_name);
+
+      const car = ['Ss', 'Uu', 'Vv'];
+      console.log(car[0], car[1], car[2]);
+      document.writeln(car[0], car[1], car[2]);
+
+      let x1 = 0.2 + 0.1;
+      let x2 = 0.3;
+      console.log('x1 = 0.2 + 0.1; x2 = 0.3');
+      console.log('x1 == x2', x1 == x2);
+      console.log('x1 > x2', x1 > x2);
+
+      let nai = 18;
+      let isAdult = nai >= 18 ? true : false;
+      console.log(
+        'let nai = 18; let isAdult = nai >= 18 ? true : false;',
+        isAdult
+      );
+
+      let ages = 11;
+      let busFare = 0;
+
+      if (ages <= 7) {
+        busFare = 100;
+      } else if (ages >= 8 && ages <= 13) {
+        busFare = 200;
+      } else if (ages >= 14 && ages <= 19) {
+        busFare = 300;
+      } else if (ages >= 20 && ages <= 65) {
+        busFare = 400;
+      } else {
+        busFare = 0;
+      }
+      document.writeln('ur age is ' + ages + ' ur busFare is ' + busFare);
+
+      let list = [
+        { name: 'a', price: 100 },
+        { name: 'b', price: 200 },
+        { name: 'c', price: 200 },
+        { name: 'd', price: 300 },
+        { name: 'e', price: 400 },
+        { name: 'f', price: 400 },
+      ];
+      let money = 200;
+      let listLen = list.length;
+      let outputList = [];
+      for (let i = 0; i < listLen; i++) {
+        if (list[i].price <= money) {
+          outputList.push(list[i]);
+          console.log('나올 수 있는 문자', outputList);
+        }
+      }
+
+      let person2 = { fname: 'A', lname: 'B', ages: 25 };
+      for (const key in person2) {
+        console.log(person2[key]);
+      }
+
+      let sum = function (p1, p2) {
+        return p1 + p2;
+      };
+      let sum1 = sum(11, 22);
+      let sum2 = sum(33, 44);
+      console.log(sum1, sum2, sum1 + sum2);
+
+      //변수에 함수를 할당하는 방식은 변수에 대한 코드 구문이 호출하는 코드 구문보다 위에 있으면 에러
+      /**
+       *let ssum1 = ssum(11, 22);
+        let ssum2 = ssum(33, 44);
+        let ssum = function (p1, p2) {
+        return p1 + p2;
+      };*/
+
+      let some = new Function('p1', 'p2', 'return p1+p2;');
+      let some1 = some(12, 23);
+      let some2 = some(34, 45);
+      console.log(some1, some2);
+    </script>
+  </body>
+</html>
