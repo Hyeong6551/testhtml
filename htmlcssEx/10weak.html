@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고급 모바일 프로그래밍 기초 9주차</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <script>
+      var br = document.createElement('br');
+
+      //Object 객체
+      let person = new Object();
+
+      person.firstName = 'J';
+      person.lsatName = 'sh';
+      person.fullName = function () {
+        return this.firstName + this.lsatName;
+      };
+      document.writeln(person.fullName());
+      document.write('<br>');
+
+      //String 객체
+
+      //indexOf()
+      let str = "Please locate where 'locate' occurs";
+      let pos = str.indexOf('locate');
+      let pos2 = str.indexOf('locate', 15);
+      document.writeln(pos, ' ', pos2, '<br>');
+
+      //padStart/End()
+      document.write('<br>padStart/End()<br>');
+      let ps = '15';
+      let pe = '15';
+      ps = ps.padStart(4, 0);
+      pe = pe.padEnd(4, 0);
+      document.write(ps, '<br>', pe, '<br><br>');
+
+      //charAt()
+      let cht = 'HELLO WORLD';
+      document.write('charAt()<br>', cht.charAt(0), '<br><br>');
+
+      //slice()
+      document.write('slice()' + ' substring(), substr() <br>');
+      let slc = 'Apple, Banana, Kiwi';
+      document.write(slc.slice(7, 13));
+
+      //replace()
+      document.write('<br><br>replace()<br>');
+      let rpl = 'Please visit Seoul and Seoul!';
+      document.write(rpl.replace('Seoul', 'Jeju'));
+
+      //split()
+      document.write('<br><br>split()<br>');
+      let kdate = '2022-2-22';
+      document.write(kdate.split('-'));
+
+      //Number 객체
+
+      //toExponential()
+      document.write('<br><br><br>example = 10.656');
+      document.write('<br><br>toExponential()<br>');
+      let Ex = 10.656;
+      document.write(
+        Ex.toExponential(2),
+        ' (2)<br>',
+        Ex.toExponential(4),
+        ' (4)<br>'
+      );
+
+      //toFixed()
+      document.write('<br>toFixed() toPrecision()<br>');
+      document.write(
+        Ex.toFixed(0),
+        ' (0)<br>',
+        Ex.toFixed(2),
+        ' (2)<br>',
+        Ex.toFixed(6),
+        ' (6)<br>'
+      );
+
+      //Array 객체
+
+      //join()
+      document.write('<br>join()<br>');
+      let jn = ['aaa', 'bbb', 'ccc', 'ddd'];
+      document.write(jn.join(' * '), '<br>');
+
+      //pop()
+      document.write('<br>pop()<br>');
+      document.write(jn.pop(), ' / ', jn);
+    </script>
+    <div class="button">
+      <button class="prev" type="button" onClick="location.href='10weak.html'">
+        이전 페이지
+      </button>
+      <button
+        class="next"
+        type="button"
+        onClick="location.href='./11weak.html'"
+      >
+        다음 페이지
+      </button>
+    </div>
+  </body>
+</html>
