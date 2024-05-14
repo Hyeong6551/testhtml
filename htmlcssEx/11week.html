@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //window 객체
+      function myF() {
+        console.log(this);
+      }
+      myF();
+
+      //this에 DOM 요소가 바인딩 된 경우
+      function callFunc(obj) {
+        console.log(obj);
+      }
+      function changeSelect(obj) {
+        console.log(obj.value);
+      }
+
+      //this에 Object 객체가 바인딩 된 경우
+      let person = {
+        fstN: 'John',
+        lstN: 'Doe',
+        FN: function () {
+          return this.fstN + ' ' + this.lstN + '<br>';
+        },
+      };
+      console.log(person.FN());
+      document.write(person.FN());
+
+      //Scope//  ※중요
+      function car() {
+        let carName = 'Volvo';
+        console.log(carName);
+      }
+      car();
+
+      let carName2 = 'KIA';
+      function car2() {
+        console.log(carName2);
+      }
+      car2();
+      console.log(carName2);
+
+      //Arrow Function
+      //함수 선언식
+      function hello(name) {
+        return 'hello ' + name;
+      }
+      console.dir(hello);
+
+      //함수 표현식
+      const hello2 = function (name) {
+        return 'hello ' + name;
+      };
+      console.dir(hello2);
+
+      //파라미터가 하나만 있을 때는 주변 괄호 생략 가능
+      const hello3 = (name) => {
+        return 'hello ' + name;
+      };
+      console.dir(hello3);
+
+      //화살표 함수의 유일한 문장이 'return'일 때 'return'과 '중괄호({})' 생략 가능'
+      const hello4 = (name) => 'hello ' + name;
+      console.dir(hello4);
+
+      //Template Literals
+      function hello5(name) {
+        let name2 = 'sh';
+        console.log(`hello ${name2}. Welcome! ${name}`);
+      }
+      hello5('Mad');
+
+      //Object Literal Syntax Extension
+      let type = 'student';
+
+      let sc = {
+        [type]: 'John',
+        sc: 95,
+      };
+
+      //Spread Operator
+      let arr1 = [4, 5, 6];
+      let arr2 = [1, 2, 3];
+      let arr3 = [...arr2, ...arr1];
+      document.write('<br>[ Spread Operator ]<br>');
+      console.log(arr3);
+      document.write(arr3);
+
+      //Object Destructuring
+      function getPerson() {
+        return {
+          firstName: 'John',
+          lastName: 'Doe',
+          age: 25,
+          email: 'john@gmail.com',
+          city: 'New York',
+          country: 'USA',
+        };
+      }
+      let { firstName, lastName } = getPerson();
+      console.log(firstName);
+      console.log(lastName);
+
+      function displayFullName({ firstName, lastName }) {
+        console.log(`${firstName} ${lastName}`);
+      }
+      displayFullName(getPerson());
+
+      //Array Destructuring
+      function getSc() {
+        return [70, 80, 90];
+      }
+      let scores = getSc();
+      let x = scores[0],
+        y = scores[1],
+        z = scores[2];
+      console.log(x, y, z);
+    </script>
+    <div>
+      <button type="button" onclick="this.style.backgroundColor='red'">
+        클릭
+      </button>
+      <button type="button" onclick="callFunc(this);">클릭2</button>
+      <select onchange="changeSelect(this);">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+    <br />
+    <div class="button">
+      <button class="prev" type="button" onClick="location.href='10week.html'">
+        이전 페이지
+      </button>
+      <button
+        class="next"
+        type="button"
+        onClick="location.href='./12week.html'"
+      >
+        다음 페이지
+      </button>
+    </div>
+  </body>
+</html>
