@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고급 모바일 프로그래밍 기초 12주차</title>
+  </head>
+  <body>
+    <input type="file" multiple/ >
+
+    <script>
+      //데이터 조회
+      //   const URL = 'https:/jsonplaceholder.typicode.com';
+      //   fetch(`${URL}/posts`)
+      //     .then((response) => response.json())
+      //     .then((json) => console.log(json));
+
+      //데이터 생성
+      //   fetch(`${URL}/posts`, {
+      //     method: 'POST',
+      //     body: JSON.stringify({
+      //       title: 'foo',
+      //       body: 'bar',
+      //       userId: 1,
+      //     }),
+      //     headers: {
+      //       'content-type': 'application/json; charset=utf-8',
+      //     },
+      //   })
+      //     .then((response) => response.json())
+      //     .then((json) => console.log(json));
+
+      //데이터 삭제
+      //   fetch(`${URL}/posts/1`, {
+      //     method: 'DELETE',
+      //   });
+
+      //파일 전송
+      //   let formData = new FormData();
+      //   let fileField = document.querySelector('input[type="file"]');
+
+      //   formData.append('username', 'abc');
+      //   formData.append('attachment', filefield.files[0]);
+
+      //다중 파일 전송
+      //   let photos = document.querySelector('input[type="file"][multiple]');
+      //   formData.append('title', 'My Photos');
+      //   for (let i = 0; i < photos.files.length; i++) {
+      //     formData.append('photos', photos.files[i]);
+      //   }
+
+      //전송
+      //   fetch('url', {
+      //     method: 'POST',
+      //     body: formData,
+      //   })
+      //     .then((response) => response.json())
+      //     .catch((error) => console.error('Error:', error))
+      //     .then((response) => console.log('Success:', JSON.stringify(response)));
+    </script>
+    <div class="button">
+      <button
+        class="prev"
+        type="button"
+        onClick="location.href='11-2week.html'"
+      >
+        이전 페이지
+      </button>
+      <button
+        class="next"
+        type="button"
+        onClick="location.href='./12-2week.html'"
+      >
+        다음 페이지
+      </button>
+    </div>
+  </body>
+</html>

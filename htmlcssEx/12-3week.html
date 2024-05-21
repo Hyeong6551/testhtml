@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고급 모바일 프로그래밍 기초 12-(3)주차</title>
+  </head>
+  <body>
+    <script>
+      //async await 비동기로 실행하는데 결과가 올때까지 기다리겠다
+      //fetch api 자체가 promise인데 코드가 복잡하고 가독성 떨어짐
+      //async await은 간결하고 가독성이 높음
+
+      const URL = 'https:/jsonplaceholder.typicode.com';
+
+      //fetch api 구현
+      // function myFunction() {
+      //   //데이터가져오기
+      //   fetch(`${URL}/posts/1`)
+      //     .then((response) => response.json())
+      //     .then((json) => {
+      //       console.log(json);
+      //       //데이터 수정
+      //       fetch(`${URL}/posts/1`, {
+      //         method: "PUT", //http methods
+      //         body: JSON.stringify({
+      //           //body정의
+      //           id: 1,
+      //           title: "foo",
+      //           body: "bar",
+      //           userId: 1,
+      //         }),
+      //         headers: {
+      //           //header정의
+      //           "content-type": "application/json; charset=utf-8",
+      //         },
+      //       })
+      //         .then((response) => response.json())
+      //         .then((json) => console.log(json));
+      //     });
+      // }
+
+      // myFunction();
+
+      //async await으로 간결하게 구현
+      async function myFunc() {
+        const res1 = await fetch(`${URL}/posts/1`);
+        console.log('async res1', res1);
+        const res2 = await fetch(`${URL}/posts/1`, {
+          method: 'PUT', //http methods
+          body: JSON.stringify({
+            //body정의
+            id: 1,
+            title: 'foo',
+            body: 'bar',
+            userId: 1,
+          }),
+          headers: {
+            //header정의
+            'content-type': 'application/json; charset=utf-8',
+          },
+        });
+        const res2Json = await res2.json();
+        console.log('async res2Json', res2Json);
+      }
+
+      myFunc();
+    </script>
+    <div class="button">
+      <button
+        class="prev"
+        type="button"
+        onClick="location.href='12week-2.html'"
+      >
+        이전 페이지
+      </button>
+      <button
+        class="next"
+        type="button"
+        onClick="location.href='./12-4week.html'"
+      >
+        다음 페이지
+      </button>
+    </div>
+  </body>
+</html>

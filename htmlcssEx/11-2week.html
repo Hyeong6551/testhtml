@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고급 모바일 프로그래밍 기초 11-(2)주차</title>
+  </head>
+  <body>
+    <script>
+      const xhr = new XMLHttpRequest();
+      const URL = 'https:/jsonplaceholder.typicode.com';
+
+      xhr.open('GET', `${URL}/posts/1`);
+      xhr.setRequestHeader('content-type', 'application/json', 'charset=UTF-8');
+
+      //응답 요청
+      const data = {
+        id: 2,
+        title: 'XHLHttpRequest',
+        author: 'Jeremy',
+      };
+      xhr.send(JSON.stringify(data));
+      console.log('xhr', xhr);
+
+      //응답 처리
+      xhr.onload = () => {
+        if (xhr.status === 200) {
+          const res = JSON.parse(xhr.response);
+          console.log(res);
+        } else {
+          console.error(xhr.status, xhr.statusText);
+        }
+      };
+
+      //데이터 생성
+      // xhr.open('POST', `${URL}/posts`);
+      // xhr.setRequestHeader('content-type', 'application/json', 'charset=UTF-8');
+      // const data = {
+      //   userId: 1,
+      //   title: 'foo',
+      //   body: 'bar',
+      // };
+      // xhr.send(JSON.stringify(data));
+      // xhr.onload = () => {
+      //   if (xhr.status === 201) {
+      //     const res = JSON.parse(xhr.response);
+      //     console.log(res);
+      //   } else {
+      //     console.log(xhr.status, xhr.statusText);
+      //   }
+      // };
+
+      // 데이터 수정
+      // xhr.open('PUT', `${URL}/posts/1`);
+      // xhr.setRequestHeader('content-type', 'application/json', 'charset=UTF-8');
+      // const data = {
+      //   userId: 1,
+      //   title: 'foo',
+      //   body: 'bar',
+      // };
+      // xhr.send(JSON.stringify(data));
+      // xhr.onload = () => {
+      //   if (xhr.status === 200) {
+      //     const res = JSON.parse(xhr.response);
+      //     console.log(res);
+      //   } else {
+      //     console.log(xhr.status, xhr.statusText);
+      //   }
+      // };
+
+      //데이터 삭제
+      // xhr.open('DELETE', `${URL}/posts/1`);
+      // xhr.setRequestHeader('content-type', 'application/json', 'charset=UTF-8');
+      // xhr.send();
+      // xhr.onload = () => {
+      //   if (xhr.status === 200) {
+      //     const res = JSON.parse(xhr.response);
+      //     console.log(res);
+      //   } else {
+      //     console.log(xhr.status, xhr.statusText);
+      //   }
+      // };
+    </script>
+    <div class="button">
+      <button class="prev" type="button" onClick="location.href='11week.html'">
+        이전 페이지
+      </button>
+      <button
+        class="next"
+        type="button"
+        onClick="location.href='./12week.html'"
+      >
+        다음 페이지
+      </button>
+    </div>
+  </body>
+</html>
