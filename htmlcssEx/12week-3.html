@@ -14,33 +14,33 @@
       const URL = 'https:/jsonplaceholder.typicode.com';
 
       //fetch api 구현
-      // function myFunction() {
-      //   //데이터가져오기
-      //   fetch(`${URL}/posts/1`)
-      //     .then((response) => response.json())
-      //     .then((json) => {
-      //       console.log(json);
-      //       //데이터 수정
-      //       fetch(`${URL}/posts/1`, {
-      //         method: "PUT", //http methods
-      //         body: JSON.stringify({
-      //           //body정의
-      //           id: 1,
-      //           title: "foo",
-      //           body: "bar",
-      //           userId: 1,
-      //         }),
-      //         headers: {
-      //           //header정의
-      //           "content-type": "application/json; charset=utf-8",
-      //         },
-      //       })
-      //         .then((response) => response.json())
-      //         .then((json) => console.log(json));
-      //     });
-      // }
+      function myFunction() {
+        //데이터가져오기
+        fetch(`${URL}/posts/1`)
+          .then((response) => response.json())
+          .then((json) => {
+            console.log(json);
+            //데이터 수정
+            fetch(`${URL}/posts/1`, {
+              method: 'PUT', //http methods
+              body: JSON.stringify({
+                //body정의
+                id: 1,
+                title: 'foo',
+                body: 'bar',
+                userId: 1,
+              }),
+              headers: {
+                //header정의
+                'content-type': 'application/json; charset=utf-8',
+              },
+            })
+              .then((response) => response.json())
+              .then((json) => console.log(json));
+          });
+      }
 
-      // myFunction();
+      myFunction();
 
       //async await으로 간결하게 구현
       async function myFunc() {
@@ -65,6 +65,7 @@
       }
 
       myFunc();
+      //axios
     </script>
     <div class="button">
       <button
@@ -77,7 +78,7 @@
       <button
         class="next"
         type="button"
-        onClick="location.href='./12-4week.html'"
+        onClick="location.href='./modules/ECMA/13week.html'"
       >
         다음 페이지
       </button>

@@ -22,11 +22,12 @@
       }
 
       //this에 Object 객체가 바인딩 된 경우
+      let mdN = 'sss';
       let person = {
         fstN: 'John',
         lstN: 'Doe',
         FN: function () {
-          return this.fstN + ' ' + this.lstN + '<br>';
+          return this.fstN + mdN + this.lstN + '<br>';
         },
       };
       console.log(person.FN());

@@ -10,26 +10,26 @@
       const xhr = new XMLHttpRequest();
       const URL = 'https:/jsonplaceholder.typicode.com';
 
-      //   function getData() {
-      //     const xhr = new XMLHttpRequest();
-      //     xhr.open('GET', `${URL}/posts/1`);
-      //     xhr.setRequestHeader('content-type', 'application/json');
-      //     xhr.send();
+      function getData() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', `${URL}/posts/1`);
+        xhr.setRequestHeader('content-type', 'application/json');
+        xhr.send();
 
-      //     xhr.onload = () => {
-      //       if (xhr.status === 200) {
-      //         const res = JSON.parse(xhr.response);
-      //         console.log(res);
-      //         return res;
-      //       } else {
-      //         console.error(xhr.status, xhr.statusText);
-      //         return;
-      //       }
-      //     };
-      //   }
-      //   const res = getData();
-      //   console.log(res);
-      //   console.log('getData 다음 코드를 실행합니다.');
+        xhr.onload = () => {
+          if (xhr.status === 200) {
+            const res = JSON.parse(xhr.response);
+            console.log(res);
+            return res;
+          } else {
+            console.error(xhr.status, xhr.statusText);
+            return;
+          }
+        };
+      }
+      const res = getData();
+      console.log(res);
+      console.log('getData 다음 코드를 실행합니다.');
 
       function getDataPromise() {
         return new Promise((resolve, reject) => {
@@ -59,7 +59,7 @@
       <button
         class="next"
         type="button"
-        onClick="location.href='./12-3week.html'"
+        onClick="location.href='./12week-3.html'"
       >
         다음 페이지
       </button>

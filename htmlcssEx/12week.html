@@ -9,26 +9,26 @@
     <input type="file" multiple/ >
 
     <script>
-      //데이터 조회
-      //   const URL = 'https:/jsonplaceholder.typicode.com';
-      //   fetch(`${URL}/posts`)
-      //     .then((response) => response.json())
-      //     .then((json) => console.log(json));
+      // 데이터 조회
+      const URL = 'https:/jsonplaceholder.typicode.com';
+      fetch(`${URL}/posts`)
+        .then((response) => response.json())
+        .then((json) => console.log(json));
 
       //데이터 생성
-      //   fetch(`${URL}/posts`, {
-      //     method: 'POST',
-      //     body: JSON.stringify({
-      //       title: 'foo',
-      //       body: 'bar',
-      //       userId: 1,
-      //     }),
-      //     headers: {
-      //       'content-type': 'application/json; charset=utf-8',
-      //     },
-      //   })
-      //     .then((response) => response.json())
-      //     .then((json) => console.log(json));
+      fetch(`${URL}/posts`, {
+        method: 'POST',
+        body: JSON.stringify({
+          title: 'foo',
+          body: 'bar',
+          userId: 1,
+        }),
+        headers: {
+          'content-type': 'application/json; charset=utf-8',
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
 
       //데이터 삭제
       //   fetch(`${URL}/posts/1`, {
