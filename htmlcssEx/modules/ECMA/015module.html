@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>015module</title>
+  </head>
+  <body>
+    <script type="module">
+      // 선언부로 내보내기 했기때문에 중괄호나 alias로 가져오기해야함
+      import { months, TABLE, log, error } from './015exportModule1.js'; //ECMA
+      import * as testmodule from './015exportModule2.js'; //
+      import { member } from './015exportModule2.js';
+
+      log('log로 메시지 출력');
+      error('error로 메시지 출력');
+      console.log('TABLE', TABLE);
+      testmodule.log('alias로 log 메시지출력');
+      testmodule.error('alias로 error 메시지출력');
+
+      //생성자로 이름출력
+      const user = new testmodule.member('orange');
+      console.log(user.name);
+    </script>
+  </body>
+</html>

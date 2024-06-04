@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>015importDefault</title>
+  </head>
+  <body>
+    <script type="module">
+      //export default는 중괄호 사용없이 가져오기
+      import User from "./015exportDefaultModule.js";
+      const member = new User("orange");
+      member.friends = [
+        {
+          name: "hong",
+          home: "seoul",
+        },
+        {
+          name: "jung",
+          home: "busan",
+        },
+      ];
+      member.mycar("truck", "2022", "white");
+      console.log(member);
+    </script>
+  </body>
+</html>
